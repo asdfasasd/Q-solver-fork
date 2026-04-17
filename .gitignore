@@ -1,0 +1,13 @@
+build/bin
+node_modules
+frontend/dist
+lib/models
+config/config.json
+*.dll
+*.onnx
+*.exe
+!lib/*.dll
+**/.DS_Store
+.idea/
+.claude/
+frontend/package.json.md5

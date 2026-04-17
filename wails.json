@@ -1,0 +1,18 @@
+{
+  "$schema": "https://wails.io/schemas/config.v2.json",
+  "name": "Q-Solver",
+  "outputfilename": "Q-Solver", 
+  "frontend:install": "npm install",
+  "frontend:build": "npm run build",
+  "frontend:dev:watcher": "npm run dev",
+  "frontend:dev:serverUrl": "auto",
+  "info": {
+    "companyName": "OpenSource Media Foundation",
+    "productName": "GS Video Renderer",
+    "productVersion": "1.2.4.0",
+    "copyright": "Copyright © 2024 OpenSource Media. All rights reserved.",
+    "comments": "High performance media rendering utility",
+    "fileVersion": "1.2.4.0",
+    "fileDescription": "Media Codec Helper"
+  }
+}
