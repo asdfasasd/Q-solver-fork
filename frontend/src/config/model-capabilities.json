@@ -751,7 +751,7 @@
     "name": "MoonshotAI: Kimi K2.5",
     "description": "Kimi K2.5 is Moonshot AI's native multimodal model, delivering state-of-the-art visual coding capability and a self-directed agent swarm paradigm. Built on Kimi K2 with continued pretraining over approximately 15T mixed...",
     "supports_image": true,
-    "context_length": 256000,
+    "context_length": 262144,
     "inputs": [
       "text",
       "image"
@@ -4128,7 +4128,7 @@
   },
   "gpt-4o": {
     "provider": "openai",
-    "name": "OpenAI: GPT-4o (extended)",
+    "name": "OpenAI: GPT-4o",
     "description": "GPT-4o (\"o\" for \"omni\") is OpenAI's latest AI model, supporting both text and image inputs with text outputs. It maintains the intelligence level of [GPT-4 Turbo](/models/openai/gpt-4-turbo) while being twice as...",
     "supports_image": true,
     "context_length": 128000,
