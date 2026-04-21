@@ -1,4 +1,18 @@
 {
+  "kimi-k2.6": {
+    "provider": "moonshotai",
+    "name": "MoonshotAI: Kimi K2.6",
+    "description": "Kimi K2.6 is Moonshot AI's next-generation multimodal model, designed for long-horizon coding, coding-driven UI/UX generation, and multi-agent orchestration. It handles complex end-to-end coding tasks across Python, Rust, and Go, and...",
+    "supports_image": true,
+    "context_length": 262144,
+    "inputs": [
+      "text",
+      "image"
+    ],
+    "outputs": [
+      "text"
+    ]
+  },
   "claude-opus-4.7": {
     "provider": "anthropic",
     "name": "Anthropic: Claude Opus 4.7",
@@ -1249,7 +1263,7 @@
     "name": "DeepSeek: DeepSeek V3.2",
     "description": "DeepSeek-V3.2 is a large language model designed to harmonize high computational efficiency with strong reasoning and agentic tool-use performance. It introduces DeepSeek Sparse Attention (DSA), a fine-grained sparse attention mechanism...",
     "supports_image": false,
-    "context_length": 163840,
+    "context_length": 131072,
     "inputs": [
       "text"
     ],
