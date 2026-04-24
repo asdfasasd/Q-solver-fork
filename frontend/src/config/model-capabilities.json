@@ -1,4 +1,30 @@
 {
+  "ling-2.6-1t": {
+    "provider": "inclusionai",
+    "name": "inclusionAI: Ling-2.6-1T (free)",
+    "description": "Ling-2.6-1T is an instant (instruct) model from inclusionAI and the company’s trillion-parameter flagship, designed for real-world agents that require fast execution and high efficiency at scale. It uses a “fast...",
+    "supports_image": false,
+    "context_length": 262144,
+    "inputs": [
+      "text"
+    ],
+    "outputs": [
+      "text"
+    ]
+  },
+  "hy3-preview": {
+    "provider": "tencent",
+    "name": "Tencent: Hy3 preview (free)",
+    "description": "Hy3 preview is a high-efficiency Mixture-of-Experts model from Tencent designed for agentic workflows and production use. It supports configurable reasoning levels across disabled, low, and high modes, allowing it to...",
+    "supports_image": false,
+    "context_length": 262144,
+    "inputs": [
+      "text"
+    ],
+    "outputs": [
+      "text"
+    ]
+  },
   "mimo-v2.5-pro": {
     "provider": "xiaomi",
     "name": "Xiaomi: MiMo-V2.5-Pro",
@@ -103,7 +129,7 @@
     "name": "MoonshotAI: Kimi K2.6",
     "description": "Kimi K2.6 is Moonshot AI's next-generation multimodal model, designed for long-horizon coding, coding-driven UI/UX generation, and multi-agent orchestration. It handles complex end-to-end coding tasks across Python, Rust, and Go, and...",
     "supports_image": true,
-    "context_length": 262144,
+    "context_length": 256000,
     "inputs": [
       "text",
       "image"
@@ -1423,6 +1449,19 @@
       "text",
       "image",
       "file"
+    ],
+    "outputs": [
+      "text"
+    ]
+  },
+  "cogito-v2.1-671b": {
+    "provider": "deepcogito",
+    "name": "Deep Cogito: Cogito v2.1 671B",
+    "description": "Cogito v2.1 671B MoE represents one of the strongest open models globally, matching performance of frontier closed and open models. This model is trained using self play with reinforcement learning...",
+    "supports_image": false,
+    "context_length": 128000,
+    "inputs": [
+      "text"
     ],
     "outputs": [
       "text"
@@ -3411,7 +3450,7 @@
     "name": "Google: Gemini 2.0 Flash",
     "description": "Gemini Flash 2.0 offers a significantly faster time to first token (TTFT) compared to [Gemini Flash 1.5](/google/gemini-flash-1.5), while maintaining quality on par with larger models like [Gemini Pro 1.5](/google/gemini-pro-1.5). It...",
     "supports_image": true,
-    "context_length": 1000000,
+    "context_length": 1048576,
     "inputs": [
       "text",
       "image",
