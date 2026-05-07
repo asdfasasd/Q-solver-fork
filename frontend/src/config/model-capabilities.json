@@ -1,4 +1,17 @@
 {
+  "cobuddy": {
+    "provider": "baidu",
+    "name": "Baidu Qianfan: CoBuddy (free)",
+    "description": "CoBuddy is a code generation model from Baidu, optimized for coding tasks and AI Agent workflows. It features high inference throughput and low end-to-end latency, with native support for tool...",
+    "supports_image": false,
+    "context_length": 131072,
+    "inputs": [
+      "text"
+    ],
+    "outputs": [
+      "text"
+    ]
+  },
   "gpt-chat-latest": {
     "provider": "openai",
     "name": "OpenAI: GPT Chat Latest",
@@ -161,7 +174,7 @@
     "name": "MoonshotAI Kimi Latest",
     "description": "This model always redirects to the latest model in the MoonshotAI Kimi family.",
     "supports_image": true,
-    "context_length": 262142,
+    "context_length": 262144,
     "inputs": [
       "text",
       "image"
@@ -475,7 +488,7 @@
     "name": "MoonshotAI: Kimi K2.6",
     "description": "Kimi K2.6 is Moonshot AI's next-generation multimodal model, designed for long-horizon coding, coding-driven UI/UX generation, and multi-agent orchestration. It handles complex end-to-end coding tasks across Python, Rust, and Go, and...",
     "supports_image": true,
-    "context_length": 262142,
+    "context_length": 262144,
     "inputs": [
       "text",
       "image"
@@ -1354,19 +1367,6 @@
       "text"
     ]
   },
-  "olmo-3.1-32b-instruct": {
-    "provider": "allenai",
-    "name": "AllenAI: Olmo 3.1 32B Instruct",
-    "description": "Olmo 3.1 32B Instruct is a large-scale, 32-billion-parameter instruction-tuned language model engineered for high-performance conversational AI, multi-turn dialogue, and practical instruction following. As part of the Olmo 3.1 family, this...",
-    "supports_image": false,
-    "context_length": 65536,
-    "inputs": [
-      "text"
-    ],
-    "outputs": [
-      "text"
-    ]
-  },
   "seed-1.6-flash": {
     "provider": "bytedance-seed",
     "name": "ByteDance Seed: Seed 1.6 Flash",
@@ -1928,10 +1928,10 @@
   },
   "nemotron-nano-12b-v2-vl": {
     "provider": "nvidia",
-    "name": "NVIDIA: Nemotron Nano 12B 2 VL",
+    "name": "NVIDIA: Nemotron Nano 12B 2 VL (free)",
     "description": "NVIDIA Nemotron Nano 2 VL is a 12-billion-parameter open multimodal reasoning model designed for video understanding and document intelligence. It introduces a hybrid Transformer-Mamba architecture, combining transformer-level accuracy with Mamba’s...",
     "supports_image": true,
-    "context_length": 131072,
+    "context_length": 128000,
     "inputs": [
       "image",
       "text",
@@ -4303,14 +4303,15 @@
       "text"
     ]
   },
-  "llama-3.2-3b-instruct": {
+  "llama-3.2-11b-vision-instruct": {
     "provider": "meta-llama",
-    "name": "Meta: Llama 3.2 3B Instruct",
-    "description": "Llama 3.2 3B is a 3-billion-parameter multilingual large language model, optimized for advanced natural language processing tasks like dialogue generation, reasoning, and summarization. Designed with the latest transformer architecture, it...",
-    "supports_image": false,
-    "context_length": 80000,
+    "name": "Meta: Llama 3.2 11B Vision Instruct",
+    "description": "Llama 3.2 11B Vision is a multimodal model with 11 billion parameters, designed to handle tasks combining visual and textual data. It excels in tasks such as image captioning and...",
+    "supports_image": true,
+    "context_length": 131072,
     "inputs": [
-      "text"
+      "text",
+      "image"
     ],
     "outputs": [
       "text"
@@ -4329,15 +4330,14 @@
       "text"
     ]
   },
-  "llama-3.2-11b-vision-instruct": {
+  "llama-3.2-3b-instruct": {
     "provider": "meta-llama",
-    "name": "Meta: Llama 3.2 11B Vision Instruct",
-    "description": "Llama 3.2 11B Vision is a multimodal model with 11 billion parameters, designed to handle tasks combining visual and textual data. It excels in tasks such as image captioning and...",
-    "supports_image": true,
-    "context_length": 131072,
+    "name": "Meta: Llama 3.2 3B Instruct",
+    "description": "Llama 3.2 3B is a 3-billion-parameter multilingual large language model, optimized for advanced natural language processing tasks like dialogue generation, reasoning, and summarization. Designed with the latest transformer architecture, it...",
+    "supports_image": false,
+    "context_length": 80000,
     "inputs": [
-      "text",
-      "image"
+      "text"
     ],
     "outputs": [
       "text"
@@ -4356,10 +4356,10 @@
       "text"
     ]
   },
-  "command-r-plus-08-2024": {
+  "command-r-08-2024": {
     "provider": "cohere",
-    "name": "Cohere: Command R+ (08-2024)",
-    "description": "command-r-plus-08-2024 is an update of the [Command R+](/models/cohere/command-r-plus) with roughly 50% higher throughput and 25% lower latencies as compared to the previous Command R+ version, while keeping the hardware footprint...",
+    "name": "Cohere: Command R (08-2024)",
+    "description": "command-r-08-2024 is an update of the [Command R](/models/cohere/command-r) with improved performance for multilingual retrieval-augmented generation (RAG) and tool use. More broadly, it is better at math, code and reasoning and...",
     "supports_image": false,
     "context_length": 128000,
     "inputs": [
@@ -4369,10 +4369,10 @@
       "text"
     ]
   },
-  "command-r-08-2024": {
+  "command-r-plus-08-2024": {
     "provider": "cohere",
-    "name": "Cohere: Command R (08-2024)",
-    "description": "command-r-08-2024 is an update of the [Command R](/models/cohere/command-r) with improved performance for multilingual retrieval-augmented generation (RAG) and tool use. More broadly, it is better at math, code and reasoning and...",
+    "name": "Cohere: Command R+ (08-2024)",
+    "description": "command-r-plus-08-2024 is an update of the [Command R+](/models/cohere/command-r-plus) with roughly 50% higher throughput and 25% lower latencies as compared to the previous Command R+ version, while keeping the hardware footprint...",
     "supports_image": false,
     "context_length": 128000,
     "inputs": [
@@ -4449,12 +4449,12 @@
       "text"
     ]
   },
-  "llama-3.1-8b-instruct": {
+  "llama-3.1-70b-instruct": {
     "provider": "meta-llama",
-    "name": "Meta: Llama 3.1 8B Instruct",
-    "description": "Meta's latest class of model (Llama 3.1) launched with a variety of sizes & flavors. This 8B instruct-tuned version is fast and efficient. It has demonstrated strong performance compared to...",
+    "name": "Meta: Llama 3.1 70B Instruct",
+    "description": "Meta's latest class of model (Llama 3.1) launched with a variety of sizes & flavors. This 70B instruct-tuned version is optimized for high quality dialogue usecases. It has demonstrated strong...",
     "supports_image": false,
-    "context_length": 16384,
+    "context_length": 131072,
     "inputs": [
       "text"
     ],
@@ -4462,12 +4462,12 @@
       "text"
     ]
   },
-  "llama-3.1-70b-instruct": {
+  "llama-3.1-8b-instruct": {
     "provider": "meta-llama",
-    "name": "Meta: Llama 3.1 70B Instruct",
-    "description": "Meta's latest class of model (Llama 3.1) launched with a variety of sizes & flavors. This 70B instruct-tuned version is optimized for high quality dialogue usecases. It has demonstrated strong...",
+    "name": "Meta: Llama 3.1 8B Instruct",
+    "description": "Meta's latest class of model (Llama 3.1) launched with a variety of sizes & flavors. This 8B instruct-tuned version is fast and efficient. It has demonstrated strong performance compared to...",
     "supports_image": false,
-    "context_length": 131072,
+    "context_length": 16384,
     "inputs": [
       "text"
     ],
@@ -4557,9 +4557,9 @@
       "text"
     ]
   },
-  "gpt-4o-2024-05-13": {
+  "gpt-4o": {
     "provider": "openai",
-    "name": "OpenAI: GPT-4o (2024-05-13)",
+    "name": "OpenAI: GPT-4o",
     "description": "GPT-4o (\"o\" for \"omni\") is OpenAI's latest AI model, supporting both text and image inputs with text outputs. It maintains the intelligence level of [GPT-4 Turbo](/models/openai/gpt-4-turbo) while being twice as...",
     "supports_image": true,
     "context_length": 128000,
@@ -4572,9 +4572,9 @@
       "text"
     ]
   },
-  "gpt-4o": {
+  "gpt-4o-2024-05-13": {
     "provider": "openai",
-    "name": "OpenAI: GPT-4o",
+    "name": "OpenAI: GPT-4o (2024-05-13)",
     "description": "GPT-4o (\"o\" for \"omni\") is OpenAI's latest AI model, supporting both text and image inputs with text outputs. It maintains the intelligence level of [GPT-4 Turbo](/models/openai/gpt-4-turbo) while being twice as...",
     "supports_image": true,
     "context_length": 128000,
@@ -4763,12 +4763,12 @@
       "text"
     ]
   },
-  "gpt-3.5-turbo-instruct": {
-    "provider": "openai",
-    "name": "OpenAI: GPT-3.5 Turbo Instruct",
-    "description": "This model is a variant of GPT-3.5 Turbo tuned for instructional prompts and omitting chat-related optimizations. Training data: up to Sep 2021.",
+  "mistral-7b-instruct-v0.1": {
+    "provider": "mistralai",
+    "name": "Mistral: Mistral 7B Instruct v0.1",
+    "description": "A 7.3B parameter model that outperforms Llama 2 13B on all benchmarks, with optimizations for speed and context length.",
     "supports_image": false,
-    "context_length": 4095,
+    "context_length": 2824,
     "inputs": [
       "text"
     ],
@@ -4776,12 +4776,12 @@
       "text"
     ]
   },
-  "mistral-7b-instruct-v0.1": {
-    "provider": "mistralai",
-    "name": "Mistral: Mistral 7B Instruct v0.1",
-    "description": "A 7.3B parameter model that outperforms Llama 2 13B on all benchmarks, with optimizations for speed and context length.",
+  "gpt-3.5-turbo-instruct": {
+    "provider": "openai",
+    "name": "OpenAI: GPT-3.5 Turbo Instruct",
+    "description": "This model is a variant of GPT-3.5 Turbo tuned for instructional prompts and omitting chat-related optimizations. Training data: up to Sep 2021.",
     "supports_image": false,
-    "context_length": 2824,
+    "context_length": 4095,
     "inputs": [
       "text"
     ],
@@ -4841,12 +4841,12 @@
       "text"
     ]
   },
-  "gpt-4-0314": {
+  "gpt-3.5-turbo": {
     "provider": "openai",
-    "name": "OpenAI: GPT-4 (older v0314)",
-    "description": "GPT-4-0314 is the first version of GPT-4 released, with a context length of 8,192 tokens, and was supported until June 14. Training data: up to Sep 2021.",
+    "name": "OpenAI: GPT-3.5 Turbo",
+    "description": "GPT-3.5 Turbo is OpenAI's fastest model. It can understand and generate natural language or code, and is optimized for chat and traditional completion tasks.\n\nTraining data up to Sep 2021.",
     "supports_image": false,
-    "context_length": 8191,
+    "context_length": 16385,
     "inputs": [
       "text"
     ],
@@ -4867,12 +4867,12 @@
       "text"
     ]
   },
-  "gpt-3.5-turbo": {
+  "gpt-4-0314": {
     "provider": "openai",
-    "name": "OpenAI: GPT-3.5 Turbo",
-    "description": "GPT-3.5 Turbo is OpenAI's fastest model. It can understand and generate natural language or code, and is optimized for chat and traditional completion tasks.\n\nTraining data up to Sep 2021.",
+    "name": "OpenAI: GPT-4 (older v0314)",
+    "description": "GPT-4-0314 is the first version of GPT-4 released, with a context length of 8,192 tokens, and was supported until June 14. Training data: up to Sep 2021.",
     "supports_image": false,
-    "context_length": 16385,
+    "context_length": 8191,
     "inputs": [
       "text"
     ],
