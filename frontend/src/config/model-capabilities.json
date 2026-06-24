@@ -19,7 +19,7 @@
     "name": "Google: Nano Banana Pro (Gemini 3 Pro Image)",
     "description": "Nano Banana Pro is Google’s most advanced image-generation and editing model, built on Gemini 3 Pro. It extends the original Nano Banana with significantly improved multimodal reasoning, real-world grounding, and...",
     "supports_image": true,
-    "context_length": 65536,
+    "context_length": 131072,
     "inputs": [
       "image",
       "text"
@@ -987,7 +987,7 @@
     "name": "Kwaipilot: KAT-Coder-Pro V2",
     "description": "KAT-Coder-Pro V2 is the latest high-performance model in KwaiKAT’s KAT-Coder series, designed for complex enterprise-grade software engineering and SaaS integration. It builds on the agentic coding strengths of earlier versions,...",
     "supports_image": false,
-    "context_length": 256000,
+    "context_length": 262144,
     "inputs": [
       "text"
     ],
@@ -1113,7 +1113,7 @@
     "name": "Qwen: Qwen3.5-9B",
     "description": "Qwen3.5-9B is a multimodal foundation model from the Qwen3.5 family, designed to deliver strong reasoning, coding, and visual understanding in an efficient 9B-parameter architecture. It uses a unified vision-language design...",
     "supports_image": true,
-    "context_length": 262144,
+    "context_length": 256000,
     "inputs": [
       "text",
       "image",
@@ -1811,19 +1811,6 @@
       "text"
     ]
   },
-  "rnj-1-instruct": {
-    "provider": "essentialai",
-    "name": "EssentialAI: Rnj 1 Instruct",
-    "description": "Rnj-1 is an 8B-parameter, dense, open-weight model family developed by Essential AI and trained from scratch with a focus on programming, math, and scientific reasoning. The model demonstrates strong performance...",
-    "supports_image": false,
-    "context_length": 32768,
-    "inputs": [
-      "text"
-    ],
-    "outputs": [
-      "text"
-    ]
-  },
   "bodybuilder": {
     "provider": "openrouter",
     "name": "Body Builder (beta)",
@@ -1941,19 +1928,6 @@
     "provider": "deepseek",
     "name": "DeepSeek: DeepSeek V3.2",
     "description": "DeepSeek-V3.2 is a large language model designed to harmonize high computational efficiency with strong reasoning and agentic tool-use performance. It introduces DeepSeek Sparse Attention (DSA), a fine-grained sparse attention mechanism...",
-    "supports_image": false,
-    "context_length": 131072,
-    "inputs": [
-      "text"
-    ],
-    "outputs": [
-      "text"
-    ]
-  },
-  "intellect-3": {
-    "provider": "prime-intellect",
-    "name": "Prime Intellect: INTELLECT-3",
-    "description": "INTELLECT-3 is a 106B-parameter Mixture-of-Experts model (12B active) post-trained from GLM-4.5-Air-Base using supervised fine-tuning (SFT) followed by large-scale reinforcement learning (RL). It offers state-of-the-art performance for its size across math,...",
     "supports_image": false,
     "context_length": 131072,
     "inputs": [
@@ -4039,10 +4013,10 @@
       "text"
     ]
   },
-  "inflection-3-productivity": {
+  "inflection-3-pi": {
     "provider": "inflection",
-    "name": "Inflection: Inflection 3 Productivity",
-    "description": "Inflection 3 Productivity is optimized for following instructions. It is better for tasks requiring JSON output or precise adherence to provided guidelines. It has access to recent news. For emotional...",
+    "name": "Inflection: Inflection 3 Pi",
+    "description": "Inflection 3 Pi powers Inflection's [Pi](https://pi.ai) chatbot, including backstory, emotional intelligence, productivity, and safety. It has access to recent news, and excels in scenarios like customer support and roleplay. Pi...",
     "supports_image": false,
     "context_length": 8000,
     "inputs": [
@@ -4052,10 +4026,10 @@
       "text"
     ]
   },
-  "inflection-3-pi": {
+  "inflection-3-productivity": {
     "provider": "inflection",
-    "name": "Inflection: Inflection 3 Pi",
-    "description": "Inflection 3 Pi powers Inflection's [Pi](https://pi.ai) chatbot, including backstory, emotional intelligence, productivity, and safety. It has access to recent news, and excels in scenarios like customer support and roleplay. Pi...",
+    "name": "Inflection: Inflection 3 Productivity",
+    "description": "Inflection 3 Productivity is optimized for following instructions. It is better for tasks requiring JSON output or precise adherence to provided guidelines. It has access to recent news. For emotional...",
     "supports_image": false,
     "context_length": 8000,
     "inputs": [
@@ -4071,19 +4045,6 @@
     "description": "Rocinante 12B is designed for engaging storytelling and rich prose. Early testers have reported: - Expanded vocabulary with unique and expressive word choices - Enhanced creativity for vivid narratives -...",
     "supports_image": false,
     "context_length": 32768,
-    "inputs": [
-      "text"
-    ],
-    "outputs": [
-      "text"
-    ]
-  },
-  "llama-3.2-3b-instruct": {
-    "provider": "meta-llama",
-    "name": "Meta: Llama 3.2 3B Instruct",
-    "description": "Llama 3.2 3B is a 3-billion-parameter multilingual large language model, optimized for advanced natural language processing tasks like dialogue generation, reasoning, and summarization. Designed with the latest transformer architecture, it...",
-    "supports_image": false,
-    "context_length": 131072,
     "inputs": [
       "text"
     ],
@@ -4118,6 +4079,19 @@
       "text"
     ]
   },
+  "llama-3.2-3b-instruct": {
+    "provider": "meta-llama",
+    "name": "Meta: Llama 3.2 3B Instruct",
+    "description": "Llama 3.2 3B is a 3-billion-parameter multilingual large language model, optimized for advanced natural language processing tasks like dialogue generation, reasoning, and summarization. Designed with the latest transformer architecture, it...",
+    "supports_image": false,
+    "context_length": 131072,
+    "inputs": [
+      "text"
+    ],
+    "outputs": [
+      "text"
+    ]
+  },
   "qwen-2.5-72b-instruct": {
     "provider": "qwen",
     "name": "Qwen2.5 72B Instruct",
@@ -4131,10 +4105,10 @@
       "text"
     ]
   },
-  "command-r-plus-08-2024": {
+  "command-r-08-2024": {
     "provider": "cohere",
-    "name": "Cohere: Command R+ (08-2024)",
-    "description": "command-r-plus-08-2024 is an update of the [Command R+](/models/cohere/command-r-plus) with roughly 50% higher throughput and 25% lower latencies as compared to the previous Command R+ version, while keeping the hardware footprint...",
+    "name": "Cohere: Command R (08-2024)",
+    "description": "command-r-08-2024 is an update of the [Command R](/models/cohere/command-r) with improved performance for multilingual retrieval-augmented generation (RAG) and tool use. More broadly, it is better at math, code and reasoning and...",
     "supports_image": false,
     "context_length": 128000,
     "inputs": [
@@ -4144,10 +4118,10 @@
       "text"
     ]
   },
-  "command-r-08-2024": {
+  "command-r-plus-08-2024": {
     "provider": "cohere",
-    "name": "Cohere: Command R (08-2024)",
-    "description": "command-r-08-2024 is an update of the [Command R](/models/cohere/command-r) with improved performance for multilingual retrieval-augmented generation (RAG) and tool use. More broadly, it is better at math, code and reasoning and...",
+    "name": "Cohere: Command R+ (08-2024)",
+    "description": "command-r-plus-08-2024 is an update of the [Command R+](/models/cohere/command-r-plus) with roughly 50% higher throughput and 25% lower latencies as compared to the previous Command R+ version, while keeping the hardware footprint...",
     "supports_image": false,
     "context_length": 128000,
     "inputs": [
@@ -4306,9 +4280,9 @@
       "text"
     ]
   },
-  "gpt-4o-2024-05-13": {
+  "gpt-4o": {
     "provider": "openai",
-    "name": "OpenAI: GPT-4o (2024-05-13)",
+    "name": "OpenAI: GPT-4o",
     "description": "GPT-4o (\"o\" for \"omni\") is OpenAI's latest AI model, supporting both text and image inputs with text outputs. It maintains the intelligence level of [GPT-4 Turbo](/models/openai/gpt-4-turbo) while being twice as...",
     "supports_image": true,
     "context_length": 128000,
@@ -4321,9 +4295,9 @@
       "text"
     ]
   },
-  "gpt-4o": {
+  "gpt-4o-2024-05-13": {
     "provider": "openai",
-    "name": "OpenAI: GPT-4o",
+    "name": "OpenAI: GPT-4o (2024-05-13)",
     "description": "GPT-4o (\"o\" for \"omni\") is OpenAI's latest AI model, supporting both text and image inputs with text outputs. It maintains the intelligence level of [GPT-4 Turbo](/models/openai/gpt-4-turbo) while being twice as...",
     "supports_image": true,
     "context_length": 128000,
@@ -4418,12 +4392,12 @@
       "text"
     ]
   },
-  "gpt-4-turbo-preview": {
+  "gpt-3.5-turbo-0613": {
     "provider": "openai",
-    "name": "OpenAI: GPT-4 Turbo Preview",
-    "description": "The preview GPT-4 model with improved instruction following, JSON mode, reproducible outputs, parallel function calling, and more. Training data: up to Dec 2023. **Note:** heavily rate limited by OpenAI while...",
+    "name": "OpenAI: GPT-3.5 Turbo (older v0613)",
+    "description": "GPT-3.5 Turbo is OpenAI's fastest model. It can understand and generate natural language or code, and is optimized for chat and traditional completion tasks.\n\nTraining data up to Sep 2021.",
     "supports_image": false,
-    "context_length": 128000,
+    "context_length": 4095,
     "inputs": [
       "text"
     ],
@@ -4431,12 +4405,12 @@
       "text"
     ]
   },
-  "gpt-3.5-turbo-0613": {
+  "gpt-4-turbo-preview": {
     "provider": "openai",
-    "name": "OpenAI: GPT-3.5 Turbo (older v0613)",
-    "description": "GPT-3.5 Turbo is OpenAI's fastest model. It can understand and generate natural language or code, and is optimized for chat and traditional completion tasks.\n\nTraining data up to Sep 2021.",
+    "name": "OpenAI: GPT-4 Turbo Preview",
+    "description": "The preview GPT-4 model with improved instruction following, JSON mode, reproducible outputs, parallel function calling, and more. Training data: up to Dec 2023. **Note:** heavily rate limited by OpenAI while...",
     "supports_image": false,
-    "context_length": 4095,
+    "context_length": 128000,
     "inputs": [
       "text"
     ],
@@ -4527,12 +4501,12 @@
       "text"
     ]
   },
-  "gpt-4": {
+  "gpt-3.5-turbo": {
     "provider": "openai",
-    "name": "OpenAI: GPT-4",
-    "description": "OpenAI's flagship model, GPT-4 is a large-scale multimodal language model capable of solving difficult problems with greater accuracy than previous models due to its broader general knowledge and advanced reasoning...",
+    "name": "OpenAI: GPT-3.5 Turbo",
+    "description": "GPT-3.5 Turbo is OpenAI's fastest model. It can understand and generate natural language or code, and is optimized for chat and traditional completion tasks.\n\nTraining data up to Sep 2021.",
     "supports_image": false,
-    "context_length": 8191,
+    "context_length": 16385,
     "inputs": [
       "text"
     ],
@@ -4540,12 +4514,12 @@
       "text"
     ]
   },
-  "gpt-3.5-turbo": {
+  "gpt-4": {
     "provider": "openai",
-    "name": "OpenAI: GPT-3.5 Turbo",
-    "description": "GPT-3.5 Turbo is OpenAI's fastest model. It can understand and generate natural language or code, and is optimized for chat and traditional completion tasks.\n\nTraining data up to Sep 2021.",
+    "name": "OpenAI: GPT-4",
+    "description": "OpenAI's flagship model, GPT-4 is a large-scale multimodal language model capable of solving difficult problems with greater accuracy than previous models due to its broader general knowledge and advanced reasoning...",
     "supports_image": false,
-    "context_length": 16385,
+    "context_length": 8191,
     "inputs": [
       "text"
     ],
