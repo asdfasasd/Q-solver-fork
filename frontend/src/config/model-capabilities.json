@@ -36,7 +36,7 @@
     "name": "Qwen: Qwen3.8 2.4T A95B",
     "description": "Qwen3.8 2.4T A95B is an open-weight sparse mixture-of-experts model from Qwen and the open-weight variant of [Qwen3.8 Max](/qwen/qwen3.8-max), with 95 billion active parameters out of 2.4 trillion total. It is...",
     "supports_image": false,
-    "context_length": 1010000,
+    "context_length": 1048576,
     "inputs": [
       "text"
     ],
@@ -3209,7 +3209,7 @@
   },
   "gpt-oss-20b": {
     "provider": "openai",
-    "name": "OpenAI: gpt-oss-20b (free)",
+    "name": "OpenAI: gpt-oss-20b",
     "description": "gpt-oss-20b is an open-weight 21B parameter model released by OpenAI under the Apache 2.0 license. It uses a Mixture-of-Experts (MoE) architecture with 3.6B active parameters per forward pass, optimized for...",
     "supports_image": false,
     "context_length": 131072,
