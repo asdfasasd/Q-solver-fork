@@ -183,8 +183,16 @@ wails build -nsis
 ## ⚙️ 配置与使用
 
 1. 点击窗口右上角的 **设置 (Settings)** 图标。
-2. 在 **提供商 (Provider)** 中选择你已有的 API 服务 
+2. 在 **提供商 (Provider)** 中选择你已有的 API 服务
 3. 填入你的 **API Key**。
+
+### OrcaRouter
+
+1. 在 Provider 中选择 **OrcaRouter**，应用会自动填写 `https://api.orcarouter.ai/v1`。
+2. 填入在 OrcaRouter 控制台创建的 `sk-orca-...` API Key，并保存设置。
+3. 打开「模型设置」，点击刷新按钮加载你账号可用的模型；请选择支持图片输入的模型，例如 `openai/gpt-4o-mini` 或 `google/gemini-2.5-flash`。
+
+OrcaRouter 使用 OpenAI 兼容接口，模型名称带有厂商前缀；模型列表会直接从 OrcaRouter 获取。
 
 ### 🍎 macOS 特别配置
 

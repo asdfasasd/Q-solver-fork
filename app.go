@@ -415,21 +415,21 @@ func (a *App) SetWindowAlwaysOnTop(alwaysOnTop bool) {
 
 // TestConnection 测试模型连通性
 // 通过发送一个简单的消息来测试 API 是否可用
-func (a *App) TestConnection(apiKey, baseURL, model string) string {
+func (a *App) TestConnection(apiKey, baseURL, model, provider string) string {
 	ctx := a.ctx
 	if ctx == nil {
 		ctx = context.Background()
 	}
-	return a.llmService.TestConnection(ctx, apiKey, baseURL, model)
+	return a.llmService.TestConnection(ctx, apiKey, baseURL, model, provider)
 }
 
 // GetModels 获取模型列表
-func (a *App) GetModels(apiKey string, baseURL string) ([]string, error) {
+func (a *App) GetModels(apiKey, baseURL, provider string) ([]string, error) {
 	ctx := a.ctx
 	if ctx == nil {
 		ctx = context.Background()
 	}
-	return a.llmService.GetModels(ctx, apiKey, baseURL)
+	return a.llmService.GetModels(ctx, apiKey, baseURL, provider)
 }
 
 // ==================== 导出相关 ====================

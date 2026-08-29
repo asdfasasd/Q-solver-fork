@@ -187,6 +187,14 @@ wails build -nsis
 3. Paste your **API Key**.
 4. (Optional) Enable **Live API** for voice features.
 
+### OrcaRouter
+
+1. Select **OrcaRouter** in Provider. The app fills in `https://api.orcarouter.ai/v1` automatically.
+2. Enter an `sk-orca-...` API key created in the OrcaRouter dashboard and save the settings.
+3. Open Model Settings and use refresh to load the models available to your account. Choose a model with image input, such as `openai/gpt-4o-mini` or `google/gemini-2.5-flash`.
+
+OrcaRouter uses an OpenAI-compatible API. Its model IDs are provider-prefixed and are loaded directly from OrcaRouter.
+
 ### 🍎 macOS Setup
 
 macOS requires specific permissions for full functionality:

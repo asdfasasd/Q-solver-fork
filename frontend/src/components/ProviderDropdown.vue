@@ -71,6 +71,7 @@ const providers = [
     { value: 'qwen', label: 'Qwen (阿里云)' },
     { value: 'moonshot', label: 'Moonshot' },
     { value: 'openrouter', label: 'OpenRouter' },
+    { value: 'orcarouter', label: 'OrcaRouter' },
     { value: 'custom', label: '自定义' }
 ]
 
@@ -82,6 +83,7 @@ const PROVIDER_LOGO_MAP = {
     'qwen': '/icons/qwen-color.svg',
     'moonshot': '/icons/moonshot.svg',
     'openrouter': '/icons/openrouter.svg',
+    'orcarouter': null,
     'custom': null  // null 表示使用默认 SVG
 }
 
