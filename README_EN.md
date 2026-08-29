@@ -195,6 +195,13 @@ wails build -nsis
 
 OrcaRouter uses an OpenAI-compatible API. Its model IDs are provider-prefixed and are loaded directly from OrcaRouter.
 
+Developers can also set `ORCAROUTER_API_KEY` before launch. If the app has no saved API key, it automatically enables OrcaRouter; a saved setting always takes precedence.
+
+```powershell
+$env:ORCAROUTER_API_KEY = "sk-orca-..."
+wails dev
+```
+
 ### 🍎 macOS Setup
 
 macOS requires specific permissions for full functionality:

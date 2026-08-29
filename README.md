@@ -194,6 +194,13 @@ wails build -nsis
 
 OrcaRouter 使用 OpenAI 兼容接口，模型名称带有厂商前缀；模型列表会直接从 OrcaRouter 获取。
 
+开发者也可以在启动前设置 `ORCAROUTER_API_KEY`。当应用还没有保存 API Key 时，它会自动启用 OrcaRouter；已在设置中保存的 API Key 优先，不会被环境变量覆盖。
+
+```powershell
+$env:ORCAROUTER_API_KEY = "sk-orca-..."
+wails dev
+```
+
 ### 🍎 macOS 特别配置
 
 macOS 需要额外权限以发挥完整功能：

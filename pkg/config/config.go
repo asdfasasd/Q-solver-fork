@@ -3,6 +3,7 @@ package config
 import (
 	"Q-Solver/pkg/shortcut"
 	"encoding/json"
+	"os"
 	"runtime"
 )
 
@@ -44,7 +45,29 @@ type Config struct {
 	WindowHeight int `json:"windowHeight,omitempty"`
 }
 
-const DefaultModel = "gemini-2.5-flash"
+const (
+	DefaultModel           = "gemini-2.5-flash"
+	OrcaRouterProvider     = "orcarouter"
+	OrcaRouterBaseURL      = "https://api.orcarouter.ai/v1"
+	OrcaRouterDefaultModel = "openai/gpt-4o-mini"
+)
+
+// ApplyEnvironmentOverrides applies optional environment-based provider setup.
+// A saved API key always takes precedence, so this cannot silently replace a
+// user's existing provider selection.
+func ApplyEnvironmentOverrides(cfg *Config) {
+	apiKey := os.Getenv("ORCAROUTER_API_KEY")
+	if apiKey == "" || cfg.APIKey != "" {
+		return
+	}
+
+	cfg.APIKey = apiKey
+	cfg.Provider = OrcaRouterProvider
+	cfg.BaseURL = OrcaRouterBaseURL
+	if cfg.Model == "" || cfg.Model == DefaultModel {
+		cfg.Model = OrcaRouterDefaultModel
+	}
+}
 
 func NewDefaultConfig() Config {
 	return Config{

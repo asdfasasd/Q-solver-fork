@@ -68,6 +68,8 @@ func (cm *ConfigManager) Load() error {
 		}
 	}
 
+	ApplyEnvironmentOverrides(&cm.config)
+
 	logger.Println("配置已加载")
 	return nil
 }
