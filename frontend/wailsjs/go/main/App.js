@@ -30,8 +30,8 @@ export function GetInitStatus() {
   return window['go']['main']['App']['GetInitStatus']();
 }
 
-export function GetModels(arg1, arg2) {
-  return window['go']['main']['App']['GetModels'](arg1, arg2);
+export function GetModels(arg1, arg2, arg3) {
+  return window['go']['main']['App']['GetModels'](arg1, arg2, arg3);
 }
 
 export function GetResumePDF() {
@@ -118,8 +118,8 @@ export function SyncSettingsToDefaultSettings(arg1) {
   return window['go']['main']['App']['SyncSettingsToDefaultSettings'](arg1);
 }
 
-export function TestConnection(arg1, arg2, arg3) {
-  return window['go']['main']['App']['TestConnection'](arg1, arg2, arg3);
+export function TestConnection(arg1, arg2, arg3, arg4) {
+  return window['go']['main']['App']['TestConnection'](arg1, arg2, arg3, arg4);
 }
 
 export function ToggleClickThrough() {

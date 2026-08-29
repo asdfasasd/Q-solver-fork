@@ -68,6 +68,15 @@ export function useSettings(shortcuts, tempShortcuts, uiState, callbacks) {
     }
   })
 
+  watch(() => tempSettings.provider, (newProvider, previousProvider) => {
+    if (previousProvider && newProvider !== previousProvider) {
+      tempSettings.model = ''
+      tempSettings.assistantModel = ''
+      uiState.availableModels = []
+      uiState.connectionStatus = null
+    }
+  })
+
   /**
    * 从后端加载配置
    */
@@ -167,7 +176,7 @@ export function useSettings(shortcuts, tempShortcuts, uiState, callbacks) {
     uiState.connectionStatus = null
 
     try {
-      const result = await TestConnection(tempSettings.apiKey, tempSettings.baseURL, tempSettings.model)
+      const result = await TestConnection(tempSettings.apiKey, tempSettings.baseURL, tempSettings.model, tempSettings.provider)
       if (result === '') {
         uiState.connectionStatus = {
           type: 'success',
@@ -202,7 +211,7 @@ export function useSettings(shortcuts, tempShortcuts, uiState, callbacks) {
     if (!apiKey) return
     uiState.isLoadingModels = true
     try {
-      const models = await GetModels(apiKey, baseURL || '')
+      const models = await GetModels(apiKey, baseURL || '', tempSettings.provider)
       if (models && models.length > 0) {
         uiState.availableModels = models
         if (!tempSettings.model || tempSettings.model === 'auto') {

@@ -17,7 +17,7 @@ export function EmitEvent(arg1:string,arg2:Array<any>):Promise<void>;
 
 export function GetInitStatus():Promise<string>;
 
-export function GetModels(arg1:string,arg2:string):Promise<Array<string>>;
+export function GetModels(arg1:string,arg2:string,arg3:string):Promise<Array<string>>;
 
 export function GetResumePDF():Promise<string>;
 
@@ -61,7 +61,7 @@ export function StopRecordingKey():Promise<void>;
 
 export function SyncSettingsToDefaultSettings(arg1:string):Promise<string>;
 
-export function TestConnection(arg1:string,arg2:string,arg3:string):Promise<string>;
+export function TestConnection(arg1:string,arg2:string,arg3:string,arg4:string):Promise<string>;
 
 export function ToggleClickThrough():Promise<void>;
 

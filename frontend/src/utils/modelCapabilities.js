@@ -20,6 +20,7 @@ export const PROVIDERS = {
     liquid: { name: 'Liquid AI' },
     upstage: { name: 'Upstage' },
     openrouter: { name: 'OpenRouter' },
+    orcarouter: { name: 'OrcaRouter' },
     minimax: { name: 'MiniMax' },
     baichuan: { name: 'Baichuan' },
     huggingface: { name: 'HuggingFace', aliases: ['nousresearch', 'cognitivecomputations'] },
@@ -47,6 +48,7 @@ export const PROVIDER_BASE_URLS = {
     alibaba: 'https://dashscope.aliyuncs.com/compatible-mode/v1',
     moonshot: 'https://api.moonshot.cn/v1',
     openrouter: 'https://openrouter.ai/api/v1',
+    orcarouter: 'https://api.orcarouter.ai/v1',
     custom: ''
 }
 

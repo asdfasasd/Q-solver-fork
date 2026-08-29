@@ -14,10 +14,11 @@ import (
 type ProviderType string
 
 const (
-	ProviderOpenAI ProviderType = "openai"
-	ProviderGemini ProviderType = "gemini"
-	ProviderClaude ProviderType = "claude"
-	ProviderCustom ProviderType = "custom"
+	ProviderOpenAI     ProviderType = "openai"
+	ProviderGemini     ProviderType = "gemini"
+	ProviderClaude     ProviderType = "claude"
+	ProviderCustom     ProviderType = "custom"
+	ProviderOrcaRouter ProviderType = "orcarouter"
 )
 
 // Service LLM 服务
@@ -55,14 +56,17 @@ func (s *Service) GetProvider() Provider {
 }
 
 // DetectProviderType 根据 baseURL 或 model 名称自动识别提供商
-func DetectProviderType(Provider string) ProviderType {
+func DetectProviderType(provider string) ProviderType {
+	provider = strings.ToLower(provider)
 	switch {
-	case strings.Contains(Provider, "google"):
+	case strings.Contains(provider, "google"):
 		return ProviderGemini
-	case strings.Contains(Provider, "anthropic"):
+	case strings.Contains(provider, "anthropic"):
 		return ProviderClaude
-	case strings.Contains(Provider, "custom"):
+	case strings.Contains(provider, "custom"):
 		return ProviderCustom
+	case strings.Contains(provider, "orcarouter"):
+		return ProviderOrcaRouter
 	}
 	return ProviderOpenAI
 }
@@ -84,6 +88,9 @@ func CreateProvider(providerType ProviderType, cfg *config.Config) Provider {
 	case ProviderCustom:
 		logger.Println("创建CustomAdapter")
 		return NewCustomAdapter(cfg)
+	case ProviderOrcaRouter:
+		logger.Println("创建OrcaRouter OpenAIAdapter")
+		return NewOpenAIAdapter(cfg)
 	default:
 		logger.Println("创建OpenAIAdapter")
 		return NewOpenAIAdapter(cfg)
@@ -91,7 +98,7 @@ func CreateProvider(providerType ProviderType, cfg *config.Config) Provider {
 }
 
 // TestConnection 测试模型连通性
-func (s *Service) TestConnection(ctx context.Context, apiKey, baseURL, model string) string {
+func (s *Service) TestConnection(ctx context.Context, apiKey, baseURL, model, provider string) string {
 	if apiKey == "" {
 		return "API Key 不能为空"
 	}
@@ -108,8 +115,11 @@ func (s *Service) TestConnection(ctx context.Context, apiKey, baseURL, model str
 	tempConfig.APIKey = apiKey
 	tempConfig.BaseURL = baseURL
 	tempConfig.Model = model
+	if provider != "" {
+		tempConfig.Provider = provider
+	}
 
-	providerType := DetectProviderType(s.config.Provider)
+	providerType := DetectProviderType(tempConfig.Provider)
 	tempProvider := CreateProvider(providerType, &tempConfig)
 
 	timeoutCtx, cancel := context.WithTimeout(ctx, 15*time.Second)
@@ -124,7 +134,7 @@ func (s *Service) TestConnection(ctx context.Context, apiKey, baseURL, model str
 }
 
 // GetModels 获取模型列表
-func (s *Service) GetModels(ctx context.Context, apiKey string, baseURL string) ([]string, error) {
+func (s *Service) GetModels(ctx context.Context, apiKey, baseURL, provider string) ([]string, error) {
 	if baseURL == "" {
 		baseURL = s.config.BaseURL
 	}
@@ -132,20 +142,17 @@ func (s *Service) GetModels(ctx context.Context, apiKey string, baseURL string) 
 		apiKey = s.config.APIKey
 	}
 
-	// 如果提供了临时参数，使用临时 provider
-	if apiKey != s.config.APIKey || baseURL != s.config.BaseURL {
-		tempConfig := s.config
-		tempConfig.APIKey = apiKey
-		tempConfig.BaseURL = baseURL
-
-		providerType := DetectProviderType(s.config.Provider)
-		tempProvider := CreateProvider(providerType, &tempConfig)
-		return tempProvider.GetModels(ctx)
+	tempConfig := s.config
+	tempConfig.APIKey = apiKey
+	tempConfig.BaseURL = baseURL
+	if provider != "" {
+		tempConfig.Provider = provider
 	}
 
-	// 使用当前 provider
-	if s.provider == nil {
+	providerType := DetectProviderType(tempConfig.Provider)
+	tempProvider := CreateProvider(providerType, &tempConfig)
+	if tempProvider == nil {
 		return nil, fmt.Errorf("provider not initialized")
 	}
-	return s.provider.GetModels(ctx)
+	return tempProvider.GetModels(ctx)
 }
