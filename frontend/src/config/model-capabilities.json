@@ -1,4 +1,21 @@
 {
+  "muse-wonder": {
+    "provider": "meta",
+    "name": "Meta: Muse Wonder",
+    "description": "Muse Wonder is a frontier reasoning model from Meta, designed for complex personal and professional agentic tasks. It accepts text, images, video, audio, and PDF documents and returns text, with...",
+    "supports_image": true,
+    "context_length": 1048576,
+    "inputs": [
+      "text",
+      "image",
+      "video",
+      "file",
+      "audio"
+    ],
+    "outputs": [
+      "text"
+    ]
+  },
   "step-5-preview": {
     "provider": "stepfun",
     "name": "StepFun: Step 5 Preview",
